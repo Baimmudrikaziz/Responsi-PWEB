@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaimMudrikAziz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .banner {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px; 
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--Header-->
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li><a href="https://www.instagram.com/baimudrik_/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="http://www.youtube.com/@baimmkz5478"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://github.com/Baimmudrikaziz"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">PEMERINTAHAN.</a></h1>
+            <ul>
+                <li class="active"><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!--banner-->
+    <section class="banner">
+         </section>
+
+    <!--about-->
+    <section class="about">
+        <div class="container">
+            <h3>ABOUT</h3>
+            <p>Selamat datang di situs web pemerintah, tempat Anda dapat menemukan informasi tentang departemen dan layanan pemerintah yang tersedia. Kami bertujuan untuk memberikan layanan yang berkualitas dan memenuhi kebutuhan masyarakat.</p>
+        </div>
+    </section>
+    <!--service-->
+    <section class="service">
+        <div class="container">
+            <h3>DEPARTEMEN DAN LAYANAN</h3>
+            <div class="box" id="departments-container">
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+        <small>&copy; 2024 - FutureSync Tech. All Rights Reserved.</small>
+    </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Kode JavaScript untuk efek slide otomatis
+        const images = ["gambar1.jpg", "gambar2.jpg", "gambar3.jpg","gambar4.jpg",]; 
+        let currentIndex = 5;
+        const banner = document.querySelector(".banner");
+
+        function changeBanner() {
+            banner.innerHTML = `<img src="${images[currentIndex]}" alt="Banner Image ${currentIndex + 1}">`;
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+        }
+
+        setInterval(changeBanner, 5000); // Ubah 5000 menjadi waktu dalam milidetik untuk durasi slide
+    </script>
+</body>
+</html>
+
